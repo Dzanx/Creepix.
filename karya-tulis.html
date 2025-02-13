@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Halaman untuk memamerkan karya tulis terbaik.">
+    <title>Koleksi Karya Tulis</title>
+    <link rel="stylesheet" href="/style/karya.css"> <!-- Tautkan CSS Anda -->
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container flex justify-between items-center">
+            <h1 class="logo">Creepix</h1>
+            <!-- Hamburger Menu -->
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Navigasi -->
+            <nav class="nav-links" id="navLinks">
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="anime.html">Anime</a></li>
+                    <li><a href="desain.html">Desain Gambar</a></li>
+                    <li><a href="karya-tulis.html">Karya Tulis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container text-center">
+            <h2>Selamat Datang di Dunia Karya Tulis!</h2>
+            <p>Temukan inspirasi dari karya-karya tulis terbaik kami.</p>
+            <a href="#karya-tulis" class="btn">Jelajahi Sekarang</a>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured">
+        <div class="container">
+            <h2 class="text-center">Karya Unggulan</h2>
+            <div class="featured-grid">
+                <!-- Featured Item 1 -->
+                <div class="featured-item">
+                    <img src="images/featured1.jpg" alt="Featured Image 1">
+                    <h3>Judul: "Masa Depan Teknologi AI"</h3>
+                    <p><strong>Penulis:</strong> John Doe</p>
+                    <p><strong>Abstrak:</strong> Karya ini membahas perkembangan teknologi AI dan dampaknya pada masyarakat modern.</p>
+                    <a href="artikel1.html" class="btn">Baca Selengkapnya</a>
+                </div>
+                <!-- Featured Item 2 -->
+                <div class="featured-item">
+                    <img src="images/featured2.jpg" alt="Featured Image 2">
+                    <h3>Judul: "Pendidikan di Era Digital"</h3>
+                    <p><strong>Penulis:</strong> Jane Smith</p>
+                    <p><strong>Abstrak:</strong> Artikel ini mengeksplorasi perubahan sistem pendidikan dengan adanya teknologi digital.</p>
+                    <a href="artikel2.html" class="btn">Baca Selengkapnya</a>
+                </div>
+                <!-- Featured Item 3 -->
+                <div class="featured-item">
+                    <img src="images/featured3.jpg" alt="Featured Image 3">
+                    <h3>Judul: "Lingkungan Hidup dan Perubahan Iklim"</h3>
+                    <p><strong>Penulis:</strong> Alex Johnson</p>
+                    <p><strong>Abstrak:</strong> Penelitian ini mengulas tantangan lingkungan hidup akibat perubahan iklim global.</p>
+                    <a href="artikel3.html" class="btn">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container text-center">
+            <h2>Tentang Kami</h2>
+            <p>Kami adalah platform yang berdedikasi untuk memamerkan karya tulis berkualitas tinggi dari berbagai bidang. Tujuan kami adalah memberikan wawasan dan inspirasi kepada pembaca melalui tulisan-tulisan yang mendalam dan informatif.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p>&copy; 2024 Creepix.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle Hamburger Menu
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

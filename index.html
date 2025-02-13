@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portofolio Hobi - Game, Anime, Desain Gambar, Karya Tulis"
+    />
+    <meta name="author" content="Nama Anda" />
+    <title>Portofolio Hobi</title>
+    <!-- Link ke CSS -->
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1 class="logo">Creepix</h1>
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu" id="hamburgerMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- Navigasi -->
+        <nav class="nav-links" id="navLinks">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="anime.html">Anime</a></li>
+            <li><a href="desain.html">Desain Gambar</a></li>
+            <li><a href="karya-tulis.html">Karya Tulis</a></li>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h2>Selamat Datang di Portofolio Hobi Saya!</h2>
+        <p>Jelajahi dunia hobi saya melalui menu di atas.</p>
+      </div>
+    </section>
+
+    <!-- Flip Cards Section -->
+    <section class="flip-cards-section">
+      <div class="container">
+        <h2 class="section-title">Jelajahi Hobi Saya</h2>
+        <div class="flip-cards-container">
+          <!-- Flip Card 1 -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div
+                class="flip-card-front"
+                style="background-image: url('game-bg.jpg')"
+              >
+                <h3>Game</h3>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Saya suka bermain game rpg, mmorg dan game santai multiplayer.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flip Card 2 -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div
+                class="flip-card-front"
+                style="background-image: url('/Images/shinji.png')"
+              >
+                <h3>Anime</h3>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Anime adalah salah satu hobi utama saya. Saya suka genre
+                  Shonen, misteri dan Slice of Life.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flip Card 3 -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div
+                class="flip-card-front"
+                style="background-image: url('desain-bg.jpg')"
+              >
+                <h3>Desain Gambar</h3>
+              </div>
+              <div class="flip-card-back">
+                <p>Saya mendesain karakter dan ilustrasi oc (sekedar hobi).</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flip Card 4 -->
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div
+                class="flip-card-front"
+                style="background-image: url('tulis-bg.jpg')"
+              >
+                <h3>Karya Tulis</h3>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  Saya juga suka menulis cerita pendek,atau cerita karangan.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Creepix.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript untuk Hamburger Menu -->
+    <script>
+      // Toggle Hamburger Menu
+      const hamburgerMenu = document.getElementById("hamburgerMenu");
+      const navLinks = document.getElementById("navLinks");
+      hamburgerMenu.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

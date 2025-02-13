@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" Anime">
+    <meta name="author" content="Nama Anda">
+    <title>Anime - Portofolio Hobi</title>
+    <!-- Link ke CSS -->
+    <link rel="stylesheet" href="/style/anime.css">
+</head>
+<body>
+    <!-- Header -->
+   <header>
+        <div class="container">
+            <h1 class="logo">Creepix</h1>
+            <!-- Hamburger Menu -->
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Navigasi -->
+            <nav class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="anime.html">Anime</a></li>
+                    <li><a href="desain.html">Desain Gambar</a></li>
+                    <li><a href="karya-tulis.html">Karya Tulis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="content">
+        <div class="container">
+            <h2>Anime Favorit Saya</h2>
+            <p>Berikut adalah beberapa anime favorit saya yang telah memberikan inspirasi dalam hidup:</p>
+            <div class="anime-list">
+                <div class="anime-item">
+                    <img src="/Images/anime/bocchi.png" alt="Bocchi The Rock">
+                    <h3>Bocchi The Rock</h3>
+                    <p>Bocchi the Rock! adalah serial anime yang bercerita tentang Hitori Bocchi Gotou, seorang gadis introvert yang bergabung dengan band Kessoku Band. Hitori memiliki bakat bermain gitar yang luar biasa, namun ia kesulitan bersosialisasi dengan orang lain. </p>
+                </div>
+                <div class="anime-item">
+                    <img src="/Images/anime/clannad.png" alt="Clannad">
+                    <h3>Clannad</h3>
+                    <p>Tomoya Okazaki adalah berandalan yang menganggap hidup membosankan dan percaya bahwa dia tidak akan pernah berarti apa-apa. Bersama dengan temannya Youhei Sunohara, dia bolos sekolah dan berencana menyia-nyiakan masa SMA-nya.</p>
+                </div>
+                <div class="anime-item">
+                    <img src = "/Images/anime/D note.png" alt="Death Note">
+                    <h3>Death Note</h3>
+                    <p>cerita tentang seorang siswa SMA yang menemukan buku catatan supranatural yang dapat membunuh siapa saja yang namanya ditulis di dalamnya. </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="tierW.html" class="tier-list">Secrect button</a>
+            <p>&copy; 2025 Creepix.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk Hamburger Menu -->
+    <script>
+        // Toggle Hamburger Menu
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
