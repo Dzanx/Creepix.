@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game </title>
+    <style>/* Reset Default Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Container Styling */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        /* Header Styling */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: #fff;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        header .logo:hover {
+            color: #f1c40f;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .hamburger-menu span {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            margin: 4px 0;
+            transition: transform 0.3s ease;
+        }
+        
+        /* Navigation Links */
+        .nav-links {
+            display: flex;
+        }
+        
+        .nav-links ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links ul li a:hover {
+            color: #f1c40f;
+        }
+        
+        /* Responsive Design for Header */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: flex;
+            }
+        
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background: #2c3e50;
+                width: 100%;
+                flex-direction: column;
+                display: none;
+            }
+        
+            .nav-links.active {
+                display: flex;
+            }
+        
+            .nav-links ul {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+        }
+        
+        /* Content Section Styling */
+        .content {
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #666;
+        }
+        
+        .content ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .content ul li {
+            background: #fff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-size: 1.1rem;
+            color: #2c3e50;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .content ul li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Footer Styling */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 50px;
+        }
+        
+        footer p {
+            font-size: 0.9rem;
+        }
+        </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Creepix</h1>
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="anime.html">Anime</a></li>
+                    <li><a href="desain.html">Desain Gambar</a></li>
+                    <li><a href="karya-tulis.html">Karya Tulis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <section class="content">
+        <div class="container">
+            <h2>Game</h2>
+            <p>Berikut adalah koleksi game favorit saya:</p>
+            <ul>
+                <li>Whutering Waves</li>
+                <li>Tomb Raider</li>
+                <li>Roblox</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Creepix.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
