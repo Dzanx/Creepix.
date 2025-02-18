@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Halaman untuk memamerkan karya tulis terbaik.">
+    <title>Koleksi Karya Tulis</title>
+    <style>/* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .hamburger-menu span {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 4px 0;
+        }
+        
+        .nav-links ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links ul li a:hover {
+            color: #ff6f61;
+        }
+        
+        /* Hero Section Styling */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Images/wallhaven-2ymr79_3840x2160.png') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+        }
+        
+        .hero .btn {
+            background: #333;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        
+        .hero .btn:hover {
+            background: #ff6f61;
+            color: #fff;
+            transform: scale(1.1);
+        }
+        
+        /* Featured Section Styling */
+        .featured {
+            padding: 50px 0;
+            background: #fff;
+        }
+        
+        .featured h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+        
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .featured-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .featured-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .featured-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .featured-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .featured-item p {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .featured-item .btn {
+            background: #ff6f61;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        
+        .featured-item .btn:hover {
+            background: #333;
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+        
+        /* About Section Styling */
+        .about {
+            padding: 50px 0;
+            background: #333;
+            color: #fff;
+        }
+        
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .about p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        /* Footer Styling */
+        .site-footer {
+            background: #ff6f61;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .site-footer p {
+            font-size: 0.9rem;
+        }</style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container flex justify-between items-center">
+            <h1 class="logo">Creepix</h1>
+            <!-- Hamburger Menu -->
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Navigasi -->
+            <nav class="nav-links" id="navLinks">
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="anime.html">Anime</a></li>
+                    <li><a href="desain.html">Desain Gambar</a></li>
+                    <li><a href="karya-tulis.html">Karya Tulis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container text-center">
+            <h2>Selamat Datang di Dunia Karya Tulis!</h2>
+            <p>Temukan inspirasi dari karya-karya tulis terbaik kami.</p>
+            <a href="#karya-tulis" class="btn">Jelajahi Sekarang</a>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured">
+        <div class="container">
+            <h2 class="text-center">Karya Unggulan</h2>
+            <div class="featured-grid">
+                <!-- Featured Item 1 -->
+                <div class="featured-item">
+                    <img src="images/featured1.jpg" alt="Featured Image 1">
+                    <h3>Judul: "Masa Depan Teknologi AI"</h3>
+                    <p><strong>Penulis:</strong> John Doe</p>
+                    <p><strong>Abstrak:</strong> Karya ini membahas perkembangan teknologi AI dan dampaknya pada masyarakat modern.</p>
+                    <a href="artikel1.html" class="btn">Baca Selengkapnya</a>
+                </div>
+                <!-- Featured Item 2 -->
+                <div class="featured-item">
+                    <img src="images/featured2.jpg" alt="Featured Image 2">
+                    <h3>Judul: "Pendidikan di Era Digital"</h3>
+                    <p><strong>Penulis:</strong> Jane Smith</p>
+                    <p><strong>Abstrak:</strong> Artikel ini mengeksplorasi perubahan sistem pendidikan dengan adanya teknologi digital.</p>
+                    <a href="artikel2.html" class="btn">Baca Selengkapnya</a>
+                </div>
+                <!-- Featured Item 3 -->
+                <div class="featured-item">
+                    <img src="images/featured3.jpg" alt="Featured Image 3">
+                    <h3>Judul: "Lingkungan Hidup dan Perubahan Iklim"</h3>
+                    <p><strong>Penulis:</strong> Alex Johnson</p>
+                    <p><strong>Abstrak:</strong> Penelitian ini mengulas tantangan lingkungan hidup akibat perubahan iklim global.</p>
+                    <a href="artikel3.html" class="btn">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container text-center">
+            <h2>Tentang Kami</h2>
+            <p>Kami adalah platform yang berdedikasi untuk memamerkan karya tulis berkualitas tinggi dari berbagai bidang. Tujuan kami adalah memberikan wawasan dan inspirasi kepada pembaca melalui tulisan-tulisan yang mendalam dan informatif.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p>&copy; 2024 Creepix.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle Hamburger Menu
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
